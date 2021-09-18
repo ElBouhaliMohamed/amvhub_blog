@@ -1,7 +1,10 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
-  <div class="container px-4 mx-auto sm:px-6 lg:px-8 xl:">
-    <h1 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
+  <div class="w-full p-4 mx-auto mb-20 sm:w-3/4 md:w-1/2">
+    <div class="flex justify-center w-full">
+      <img :src="article.img">
+    </div>
+    <h1 class="py-4 text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
       {{ article.title }}
     </h1>
     <div class="bg-white">

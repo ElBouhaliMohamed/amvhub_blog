@@ -5,11 +5,20 @@
 ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 */
 module.exports = {
-  theme: {},
+  theme: {
+    extend: {
+      spacing: {
+        19: '4.8rem'
+      }
+    }
+  },
   variants: {},
   plugins: [
     require('@tailwindcss/typography')
   ],
+  future: {
+    purgeLayersByDefault: true
+  },
   purge: {
     // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
     enabled: process.env.NODE_ENV === 'production',

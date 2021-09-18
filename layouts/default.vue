@@ -1,10 +1,43 @@
 <template>
-  <div>
-    <Nuxt />
+  <div id="app">
+    <Header />
+    <div class="wrapper pt-19">
+      <!-- <vue-progress-bar /> -->
+      <transition name="fade">
+        <div class="block">
+          <Nuxt />
+        </div>
+      </transition>
+    </div>
+    <!-- <AppFooter></AppFooter> -->
   </div>
 </template>
 
+<script>
+import Vue from 'vue'
+
+import remoteConfigMixin from '~/mixins/remoteConfig'
+Vue.mixin(remoteConfigMixin)
+
+export default {
+}
+</script>
+
 <style>
+#app {
+  @apply antialiased;
+  transition: color 700ms ease;
+}
+
+.wrapper {
+  transition: margin 700ms ease;
+}
+
+.navbarMargin {
+  @apply mt-6;
+  transition: margin 700ms ease;
+}
+
 html {
   font-family:
     'Source Sans Pro',
